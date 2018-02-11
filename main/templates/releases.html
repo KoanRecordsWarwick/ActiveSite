@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Releases{% endblock %}
+{% block main %}
+	<div class="main">
+		<div id="flexcontent">
+			<div id="leftbox">
+				{# this part is for youtube links #}
+				{% for video in videos %}
+				<div class="video-release-box">
+					<iframe class="video" title="{{ video.title }}" data-releasedate="{{ video.releasedate }}" data-artists="{{ video.artists }}" width="560" height="315" src="{{ video.link }}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+				</div>
+				{% endfor %}
+			</div>
+			<div id="rightbox">
+				{# this part is for soundcloud links #}
+				{% for track in tracks %}
+				<iframe  title="{{ track.title }}" data-releasedate="{{ track.releasedate }}" data-artists="{{ track.artists }}" width="100%" height="166" scrolling="no" frameborder="no" src="{{ track.link }}"></iframe>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

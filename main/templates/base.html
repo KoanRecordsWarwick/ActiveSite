@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		{% load static %}
+		<link rel="stylesheet" href={% static 'index.css' %}>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src={% static 'index.js' %}></script>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<img id="logo" src={% static 'logo.jpg' %}></img>
+				<div id="pagelinks">
+					<ul>
+						<li><a href="/index">Home</a></li>
+						<li><a href="/news">News</a></li>
+						<li><a href="/artists">Artists</a></li>
+						<li><a href="/releases">Releases</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/contact">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		{% block main %}{% endblock %}
+		<footer>
+			<p id="copyright">Copyright C 2017 KOAN RECORDS. All Rights Reserved.</p>
+			<nav> 
+			<ul>
+				<li><a>Royalty Information</a></li>
+				<li><a>Copyright Information</a></li>
+				<li><a>Terms and Conditions</a></li>
+				<li><a>Send Us Feedback</a></li>
+				<li><a>Contact Us</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
