@@ -5,8 +5,9 @@
   {% for image in images %}
   <div class="mySlides fade">
 	  <div class="numbertext">{{ forloop.counter }} / {{ images|length }}</div>
-	  <img class="image" src="{{ STATIC_URL }}/carousel/{{ image.name }}" style="width:100%; ">
-	  <div class="text"><p>{{ image.caption }} {{ MEDIA_URL }}{{ image.source.url }}</p></div>
+	{% load static %}
+	  <img class="image" src="{% get_static_prefix %}main/images/carousel/{{ image.name }}" %} style="width:100%; ">
+	  <div class="text"><p>{{ image.caption }}</p></div>
   </div>
   {% endfor %}
 
