@@ -15,11 +15,11 @@ class Carousel(models.Model):
         return self.name
 
 class NewsItem(models.Model):
-    markdown = models.CharField(max_length=20000)
+    name = models.CharField(max_length=50, default='ineedaname')
     published_at = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
-        return self.published_at
+        return self.name + self.published_at
 
 class Artist(models.Model):
     name = models.CharField(max_length=100)

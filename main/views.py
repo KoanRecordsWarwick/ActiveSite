@@ -11,7 +11,10 @@ def index(request):
     return render(request, 'index.html', c)
 
 def news(request):
-    return render(request, 'news.html')
+    c = {
+            "newsitems" : NewsItems.objects.all()
+    }
+    return render(request, 'news.html', c)
 
 def artists(request):
     return render(request, 'artists.html')

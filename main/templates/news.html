@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}News{% endblock %}
+{% block main %}
+	{% for newsitem in newsitems %}
+		{% with "/home/koan/koansite/static/main/compiled-markdown/"|add:newsitem.title: as url %}
+		{% include url %}
+{% endblock %}
