@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.template import loader, Context
+from django.http import HttpResponse
 from main.models import *
 
 def index(request):
@@ -27,5 +28,8 @@ def about(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+def test(request):
+    return HttpResponse("Hello World")
 
 # Create your views here.
