@@ -14,7 +14,7 @@ class Carousel(models.Model):
     def __unicode__(self):
         return self.name
 
-class NewsItem(models.Model):
+class News_item(models.Model):
     name = models.CharField(max_length=50, default='ineedaname')
     published_at = models.DateTimeField(auto_now=True)
 

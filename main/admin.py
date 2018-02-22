@@ -3,7 +3,7 @@ from .models import *
 
 admin.site.register(Image)
 admin.site.register(Carousel)
-admin.site.register(NewsItem)
+admin.site.register(News_item)
 admin.site.register(Artist)
 admin.site.register(Release)
 
